@@ -42,7 +42,7 @@ For source code, or to contribute, see the
     sudo pacman -S xmonad xmonad-contrib xmobar stalonetray dmenu scrot \
         cabal-install xcompmgr
     sudo cabal update
-    cabal install --global yeganesh
+    sudo cabal install --global yeganesh
 
 ### Installing requirements on [Ubuntu Linux](http://www.ubuntu.com/)
 
