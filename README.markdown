@@ -58,7 +58,7 @@ you may already have, cloning the git repository, and updating your PATH.
 
     cd
     mv .xmonad .xmonad.orig
-    git https://github.com/jonasagx/xmonad-config.git .xmonad
+    git https://github.com/jonasagx/xmonad-config .xmonad
 
 Once xmonad-config is installed, you also need to ensure you can actually
 start xmonad.  The mechanism to do this varies based on each environment, but
