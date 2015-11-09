@@ -194,7 +194,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   --
 
   -- Close focused window.
-  , ((modMask .|. shiftMask, xK_c),
+  , ((modMask .|. shiftMask, xK_q),
      kill)
 
   -- Cycle through the available layout algorithms.
@@ -261,11 +261,16 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- TODO: update this binding with avoidStruts, ((modMask, xK_b),
 
   -- Quit xmonad.
+<<<<<<< HEAD
   -- , ((modMask .|. shiftMask, xK_q),
   --  io (exitWith ExitSuccess))
+=======
+  , ((modMask .|. shiftMask, xK_e),
+     io (exitWith ExitSuccess))
+>>>>>>> ded04c14defeaf0fc91375ba856b691f3037bd77
 
   -- Restart xmonad.
-  , ((modMask, xK_q),
+  , ((modMask, xK_r),
      restart "xmonad" True)
   ]
   ++
