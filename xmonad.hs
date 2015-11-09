@@ -46,7 +46,7 @@ myLauncher = "$(yeganesh -x -- -fn '-*-terminus-*-r-normal-*-*-120-*-*-*-*-iso88
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
+myWorkspaces = ["1:term","2:code","3:web","4:vm","5:media"] ++ map show [6..9]
 
 
 ------------------------------------------------------------------------
@@ -64,8 +64,8 @@ myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"       --> doShift "2:web"
-    , className =? "Google-chrome"  --> doShift "2:web"
+    [ className =? "Chromium"       --> doShift "3:web"
+    , className =? "Google-chrome"  --> doShift "3:web"
     , resource  =? "desktop_window" --> doIgnore
     , className =? "Galculator"     --> doFloat
     , className =? "Steam"          --> doFloat
@@ -133,7 +133,7 @@ myBorderWidth = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask = mod1Mask
+myModMask = mod4Mask
 
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
@@ -261,8 +261,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- TODO: update this binding with avoidStruts, ((modMask, xK_b),
 
   -- Quit xmonad.
-  , ((modMask .|. shiftMask, xK_q),
-     io (exitWith ExitSuccess))
+  -- , ((modMask .|. shiftMask, xK_q),
+  --  io (exitWith ExitSuccess))
 
   -- Restart xmonad.
   , ((modMask, xK_q),
